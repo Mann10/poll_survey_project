@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PollListCreateView, QuestionListCreateView, ChoiceListCreateView, AnswerListCreateView,PollResultChartView
+from .views import PollListCreateView, QuestionListCreateView, ChoiceListCreateView, AnswerListCreateView,PollResultChartView,Homepage
 
 
 urlpatterns = [
