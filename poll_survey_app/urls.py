@@ -3,6 +3,7 @@ from .views import PollListCreateView, QuestionListCreateView, ChoiceListCreateV
 
 
 urlpatterns = [
+    path('',Homepage.as_view(),name='homepage'),
     path('polls/', PollListCreateView.as_view(), name='polls'),
     path('polls/<int:pk>/', PollListCreateView.as_view(), name='polls'),
     path('questions/', QuestionListCreateView.as_view(), name='questions'),
