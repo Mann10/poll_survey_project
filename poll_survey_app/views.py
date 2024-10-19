@@ -3,6 +3,7 @@ from .models import Poll, Question, Choice, Answer
 from .serializers import PollSerializer, QuestionSerializer, ChoiceSerializer, AnswerSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import APIView
+from django.views.generic import TemplateView
 
 import matplotlib.pyplot as plt
 import io
@@ -11,6 +12,8 @@ from django.http import HttpResponse
 
 from .permissions import CanSubmitSurvey
 
+class Homepage(TemplateView):
+     template_name ='poll_survey_app/home.html'
 
 class PollListCreateView(generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIView):
     queryset = Poll.objects.all()
