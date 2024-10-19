@@ -56,6 +56,19 @@ Ensure you have the following installed:
 4. **Run migrations**
 
    ```bash
+   Before you run migrate command make sure you do below changes.
+   Configure settings.py: Open poll_survey_project/settings.py and make the following changes:
+   
+   SECRET_KEY = b'whateveryoulike'
+
+   DEBUG = True
+
+   ALLOWED_HOSTS = []
+   Comment out the following lines if they exist:
+
+   database_url = os.environ.get("DATABASES_URL")
+   DATABASES['default'] = dj_database_url.parse(database_url)
+   
    python manage.py migrate
    ```
 
